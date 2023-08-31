@@ -1,0 +1,47 @@
+.common {
+  font-size: var(--font-fs__default);
+  line-height: var(--font-lh__default);
+  font-weight: var(--font-fw__default);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  height: 36px;
+  border: none;
+  border-radius: var(--border-radius__button);
+}
+
+.common:not(.loading):hover {
+  opacity: var(--opacity__button--hover);
+}
+
+.primary {
+  color: var(--color__button--primary);
+  background-color: var(--bg-color__button--primary);
+}
+
+.primary.loading {
+  color: var(--color__button--primary--loading);
+  background-color: var(--bg-color__button--primary--loading);
+}
+
+.secondary {
+  color: var(--color__button--secondary);
+  background-color: var(--bg-color__button--secondary);
+}
+
+.secondary.loading {
+  color: var(--color__button--secondary--loading);
+  background-color: var(--bg-color__button--secondary--loading);
+}
+
+.default {
+  cursor: pointer;
+  appearance: auto;
+}
+
+.loading {
+  cursor: not-allowed;
+  appearance: none;
+}

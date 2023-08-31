@@ -1,0 +1,66 @@
+.card {
+  display: flex;
+  max-width: 320px;
+  padding: 32px 24px;
+  border-radius: var(--border-radius__default);
+  background-color: var(--bg-color__content);
+  margin: 20px auto;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form > *:first-child {
+  margin-bottom: 20px;
+}
+
+.form > *:last-child {
+  margin-top: 20px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.formItem > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.formItemError {
+  color: var(--color--error);
+}
+
+.formInput {
+  border-width: var(--border-spread-radius__input);
+  border-style: solid;
+  border-radius: var(--border-radius__input);
+  padding: 8px 12px;
+}
+.formInput.default:focus,
+.formInput.error:focus {
+  border-color: var(--border-color__input--focus);
+}
+
+.formInput.default {
+  border-color: var(--border-color);
+  background-color: var(--bg-color);
+}
+
+.formInput.error {
+  background-color: var(--bg-color--error);
+  border-color: var(--border-color--error);
+}
+
+.islandContainer {
+  display: flex;
+}
+.islandContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

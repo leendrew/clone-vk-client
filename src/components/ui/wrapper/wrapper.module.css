@@ -1,0 +1,24 @@
+.wrapper {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.lg {
+  max-width: 1200px;
+  padding: 5px 30px;
+}
+
+.md {
+  max-width: 900px;
+  padding: 5px 30px;
+}
+
+.sm {
+  max-width: 600px;
+  padding: 5px 15px;
+}
+
+.xs {
+  max-width: 400px;
+  padding: 5px;
+}
