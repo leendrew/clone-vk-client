@@ -7,12 +7,17 @@ const baseUrl = config.DEV ? 'http://localhost:8080/api' : '';
 const baseQuery = fetchBaseQuery({
   baseUrl,
   prepareHeaders: (headers, { getState }) => {
-    const token =
-      (getState() as RootState).auth.data?.accessToken ||
-      JSON.parse(window.localStorage.getItem('authData') || '').accessToken;
-    if (token) {
-      headers.set('authorization', `Bearer ${token}`);
+    const storageData = window.localStorage.getItem('authData');
+    if (!storageData) {
+      return headers;
     }
+
+    const token =
+      (getState() as RootState).auth.data?.accessToken || JSON.parse(storageData).tokens.access;
+    if (token) {
+      headers.set('Authorization', `Bearer ${token}`);
+    }
+
     return headers;
   },
 });
